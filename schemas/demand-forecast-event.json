@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DemandForecastEvent",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "hospital_id": { "type": "string" },
+    "product_id": { "type": "string" },
+    "window_hours": { "type": "integer" },
+    "forecasted_demand": { "type": "integer" },
+    "baseline_consumption": { "type": "number" },
+    "procedure_demand": { "type": "integer" }
+  },
+  "required": ["hospital_id", "product_id", "forecasted_demand"]
+}

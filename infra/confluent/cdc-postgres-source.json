@@ -1,0 +1,24 @@
+{
+  "name": "surgiflow-postgres-cdc",
+  "config": {
+    "connector.class": "PostgresCdcSourceV2",
+    "name": "surgiflow-postgres-cdc",
+    "kafka.auth.mode": "KAFKA_API_KEY",
+    "kafka.api.key": "${KAFKA_API_KEY}",
+    "kafka.api.secret": "${KAFKA_API_SECRET}",
+    "database.hostname": "${PG_HOST}",
+    "database.port": "5432",
+    "database.user": "${PG_USER}",
+    "database.password": "${PG_PASSWORD}",
+    "database.dbname": "${PG_DATABASE}",
+    "database.sslmode": "require",
+    "output.data.format": "JSON",
+    "output.key.format": "JSON",
+    "tasks.max": "1",
+    "table.include.list": "public.inventory,public.procedures,public.orders,public.shipments",
+    "topic.prefix": "surgiflow",
+    "slot.name": "surgiflow_cdc",
+    "publication.name": "surgiflow_pub",
+    "publication.autocreate.mode": "filtered"
+  }
+}

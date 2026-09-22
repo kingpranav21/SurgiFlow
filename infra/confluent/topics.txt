@@ -1,0 +1,8 @@
+surgiflow.inventory.events
+surgiflow.procedure.events
+surgiflow.order.events
+surgiflow.shipment.events
+surgiflow.procedure.requirements
+surgiflow.demand.forecast
+surgiflow.stockout.risk
+surgiflow.recommendations

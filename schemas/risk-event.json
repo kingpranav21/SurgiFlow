@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "RiskEvent",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "hospital_id": { "type": "string" },
+    "product_id": { "type": "string" },
+    "risk_level": { "type": "string" },
+    "current_inventory": { "type": "integer" },
+    "projected_demand": { "type": "integer" },
+    "projected_inventory": { "type": "integer" },
+    "predicted_stockout": { "type": ["string", "null"] },
+    "reason": { "type": "string" }
+  },
+  "required": ["hospital_id", "product_id", "risk_level"]
+}

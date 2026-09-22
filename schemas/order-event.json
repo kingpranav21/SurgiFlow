@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "OrderEvent",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "order_id": { "type": "string" },
+    "hospital_id": { "type": "string" },
+    "product_id": { "type": "string" },
+    "quantity": { "type": "integer" },
+    "status": { "type": "string" },
+    "event_time": { "type": "string" }
+  },
+  "required": ["order_id", "hospital_id", "product_id"]
+}

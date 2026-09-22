@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ProcedureEvent",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "procedure_id": { "type": "string" },
+    "hospital_id": { "type": "string" },
+    "procedure_type": { "type": "string" },
+    "scheduled_time": { "type": "string" },
+    "status": { "type": "string" },
+    "event_time": { "type": "string" }
+  },
+  "required": ["procedure_id", "hospital_id", "procedure_type"]
+}

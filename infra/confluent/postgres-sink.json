@@ -1,0 +1,23 @@
+{
+  "name": "surgiflow-postgres-sink",
+  "config": {
+    "connector.class": "PostgresSink",
+    "kafka.auth.mode": "KAFKA_API_KEY",
+    "kafka.api.key": "${CONFLUENT_API_KEY}",
+    "kafka.api.secret": "${CONFLUENT_API_SECRET}",
+    "connection.host": "${PG_HOST}",
+    "connection.port": "5432",
+    "connection.user": "${PG_USER}",
+    "connection.password": "${PG_PASSWORD}",
+    "db.name": "${PG_DATABASE}",
+    "ssl.mode": "require",
+    "input.data.format": "JSON",
+    "input.key.format": "JSON",
+    "topics": "surgiflow.stockout.risk,surgiflow.recommendations,surgiflow.demand.forecast",
+    "tasks.max": "1",
+    "auto.create": "false",
+    "auto.evolve": "false",
+    "table.name.format": "${topic}",
+    "pk.mode": "none"
+  }
+}

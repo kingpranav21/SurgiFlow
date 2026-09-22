@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "RecommendationEvent",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "source_hospital_id": { "type": "string" },
+    "target_hospital_id": { "type": "string" },
+    "product_id": { "type": "string" },
+    "quantity": { "type": "integer" },
+    "reason": { "type": "string" },
+    "status": { "type": "string" }
+  },
+  "required": ["source_hospital_id", "target_hospital_id", "product_id", "quantity"]
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ShipmentEvent",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "shipment_id": { "type": "string" },
+    "supplier_id": { "type": "string" },
+    "hospital_id": { "type": "string" },
+    "product_id": { "type": "string" },
+    "quantity": { "type": "integer" },
+    "status": { "type": "string" },
+    "delay_hours": { "type": "integer" },
+    "expected_delivery": { "type": "string" },
+    "event_time": { "type": "string" }
+  },
+  "required": ["shipment_id", "hospital_id", "product_id", "status"]
+}
